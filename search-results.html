@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dog Park Finder</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dog Park Finder</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="./assets/style.css">
+    </head>
 
-<body>
-    <header id="side-bar">
-        <h1>Dog Park Finder</h1>
-        <section id="search">
-            <!-- example search function  -->
-            <form id="search-form" onsubmit="return false">
-                <input type="text" id="search-input" placeholder="Search for a dog park!">
-                <input type="submit" id="submitbtn" value="Search">
-            </form>
-        </section>
-        <section id="results-container">
-            <h2>Results...</h2>
-            <div id="results-cards"></div>
-        </section>
-    </header>
-    <main>
-        <section id="map-container"></section>
-    </main>
-</body>
+    <body>
+        <header class="hero" id="side-bar">
+            <section class="main-container">
+                <section id="search">
+                    <h1>Dog Park Finder</h1>
+                    <h2>Your Search Results</h2>
+                    <!-- example search function  -->
+                    <form id="search-form" onsubmit="return false">
+                        <input type="text" id="search-input" placeholder="Zip Code">
+                        <input type="submit" id="submitbtn" value="Search">
+                    </form>
+                </section>
+                <section class="results-container">
+                    <div id="results-cards">Results Cards</div>  
+                    <div id="map">Map</div>
+                    
+                </section>
+            </section>
+        </header>
+        <main></main>
+        <script src="./search.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf-QB1u6jvqFrI7DbWiXpE2yKIshbYqxo&libraries=places&callback=initMap"></script>
 
-<script src="./search.js"></script>
-
+        
+    </body>
 </html>
