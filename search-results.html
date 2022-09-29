@@ -14,7 +14,8 @@
         <header class="hero" id="side-bar">
             <section class="main-container">
                 <section id="search">
-                    <h1>Dog Park Finder - Your Search Results</h1>
+                    <h1>Dog Park Finder</h1>
+                    <h2>Your Search Results</h2>
                     <!-- example search function  -->
                     <form id="search-form" onsubmit="return false">
                         <input type="text" id="search-input" placeholder="Zip Code">
@@ -22,15 +23,16 @@
                     </form>
                 </section>
                 <section class="results-container">
-                    <div id="map">Map</div>
                     <div id="results-cards">Results Cards</div>  
+                    <div id="map">Map</div>
+                    
                 </section>
             </section>
         </header>
         <main></main>
-
+        <script src="./search.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf-QB1u6jvqFrI7DbWiXpE2yKIshbYqxo&libraries=places&callback=initMap"></script>
 
-        <script src="./search.js"></script>
+        
     </body>
 </html>

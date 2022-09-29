@@ -3,8 +3,6 @@
     margin: 0;  
 }
 
-
-
 .hero {
     background-image: url("../assets/dogcollage.png");
     height: 100vh;
@@ -18,7 +16,16 @@ h1 {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+}
+
+h2 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
     color: white;
     background-color: black;
 }
@@ -30,17 +37,16 @@ h1 {
 }
 
 #search-form {
-    margin: auto;
+   
     padding: 10px;
 }
 
 .results-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 10px; 
-    margin-top: 40px;
+    display: flex;  
+    flex-direction: row;
+    margin-top: 45px;
+    padding: 4px;
+    gap: 10px;
 }
 
 #map {
@@ -55,7 +61,7 @@ h1 {
 
 #results-cards {
     height: auto;
-    width: 800px;
+    width: 250px;
     color: black;
     border: solid;
     background-color: gray;
@@ -63,4 +69,6 @@ h1 {
     border-width: 6px;
     margin-top: 5px;
 }
+
+
 
