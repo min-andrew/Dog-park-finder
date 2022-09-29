@@ -1,47 +1,65 @@
-// function initMap() {
-//     let options= {
-//         zoom: 8,
-//         center: {lat: 47.6062,lng: -122.3321}
-//     }
-//     let map = new
-//     google.maps.Map(document.getElementById("map",options));
-// }
-
-var map;
-var service;
-var infowindow;
-
-var seattle = {
-  lat: 47.6062,
-  lng: -122.3321
-};
-
-var options = {
-  zoom: 8,
-  center: seattle
-}
+let map = null;
 
 function initMap() {
+    let location = new Object();
+    navigator.geolocation.getCurrentPosition(function (pos) {
+        location.lat = pos.coords.latitude;
+        location.long = pos.coords.longitude;
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {
+                lat: location.lat,
+                lng: location.long
+            },
+            zoom: 10
+        });
+        getResults(location);
+    });
+}
 
-  var map = new google.maps.Map(document.querySelector("#map"), options);
-
-  var request = {
-    location: seattle,
-    radius: '500',
-    type: ['dog park']
-  };
-
-  service = new google.maps.places.PlacesService(map);
-  service.nearbySearch(request, callback);
+function getResults(location) {
+    let userLocation = new google.maps.LatLng(location.lat, location.long);
+    let request = {
+        location: userLocation,
+        radius: '10000',
+        type: ['park'],
+        keyword: 'dog'
+    };
+    service = new google.maps.places.PlacesService(map);
+    service.nearbySearch(request, callback);
 }
 
 function callback(results, status) {
-  if (status == google.maps.places.PlacesServiceStatus.OK) {
-    for (var i = 0; i < results.length; i++) {
-      createMarker(results[i]);
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (let i = 0; i < results.length; i++) {
+            let place = results[i];
+            console.log(results);
+            let content = `<div>
+            <h3>${place.name}</h3>
+            <p>${place.vicinity}</p>
+            <p>Rating: ${place.rating}
+            </div>`;
+        
+
+        let marker = new google.maps.Marker({
+            position: place.geometry.location, 
+            map: map, 
+            title: place.name,
+        });
+
+        let infowindow = new google.maps.InfoWindow({content: content});
+        
+
+        groupInfoWindow(marker, map, infowindow, content);
+        marker.setMap(map);
     }
-  }
 }
 
+function groupInfoWindow(marker, map, infowindow, html) {
+    marker.addListener('click', function () {
+        infowindow.setContent(html);
+        infowindow.open(map, this);
+    })
+}
+};
 
 
