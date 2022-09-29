@@ -11,13 +11,19 @@ var map;
 var service;
 var infowindow;
 
-function initMap() {
-  var seattle = new google.maps.LatLng(47.6062,-122.3321);
+var seattle = {
+  lat: 47.6062,
+  lng: -122.3321
+};
 
-  map = new google.maps.Map(document.getElementById('map'), {
-      center: seattle,
-      zoom: 10
-    });
+var options = {
+  zoom: 8,
+  center: seattle
+}
+
+function initMap() {
+
+  var map = new google.maps.Map(document.querySelector("#map"), options);
 
   var request = {
     location: seattle,
@@ -36,3 +42,6 @@ function callback(results, status) {
     }
   }
 }
+
+
+
