@@ -1,0 +1,60 @@
+* {
+    margin: 0;  
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    background-image: url("../assets/dog-collage-colorful.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+  
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+}
+    
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: yellow;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    margin-top: 15%;
+    border-style: solid;
+    border-color: black;
+    border-width: 4px;
+    border-radius: 4px;
+}
+
+h1 {
+    background-color: transparent;
+    color: black;
+    font-size: 40px;
+}
+
+.input {
+    width: 200px;
+    padding: 10px; 
+    text-align: center;
+    margin: 10px; 
+    margin-top: 5px; 
+    font-size: 20px;
+}
+
+.button {
+    width: 150px;
+}
+
+#submitBtn {
+    width: 100px; 
+    margin-top: 20px; 
+}
