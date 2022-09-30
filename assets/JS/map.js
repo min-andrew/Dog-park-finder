@@ -23,7 +23,7 @@ function getResults(location) {
   let userLocation = new google.maps.LatLng(location.lat, location.long);
   let request = {
     location: userLocation,
-    radius: '10000',
+    radius: '16000',
     type: ['park'],
     keyword: 'dog'
   };
@@ -37,7 +37,7 @@ function callback(results, status) {
       let place = results[i];
       console.log(results);
       let content = `<div>
-          <h3>${place.name}</h3>
+          <h4>${place.name}</h4>
           <p>${place.vicinity}</p>
           <p>Rating: ${place.rating}
           </div>`;
@@ -45,20 +45,25 @@ function callback(results, status) {
       let placeName = place.name;
       let placeVicinity = place.vicinity;
       let placeRating = "Rating: " + place.rating;
+      
 
 
       var resultcard = document.createElement("div");
       var name = document.createElement("h3");
       var vicinity = document.createElement("p");
       var rating = document.createElement("p");
+      
       name.append(placeName);
       vicinity.append(placeVicinity);
       rating.append(placeRating);
-      resultcard.setAttribute("id", "card");
+      
+      resultcard.setAttribute("class", "card");
       resultsCards.append(resultcard);
       resultcard.append(name);
       resultcard.append(vicinity);
       resultcard.append(rating);
+      
+     
 
 
 

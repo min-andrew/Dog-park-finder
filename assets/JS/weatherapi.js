@@ -4,6 +4,7 @@ var newLong = -122.3321;
 
 
 function cityLoc() {
+    
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + APIKey;
     fetch(queryURL)
         .then(function (response) {
