@@ -7,6 +7,7 @@ function initMap() {
   location.lat = newLat;
   location.long = newLong;
 
+
   map = new google.maps.Map(document.getElementById('map'), {
     center: {
       lat: location.lat,
