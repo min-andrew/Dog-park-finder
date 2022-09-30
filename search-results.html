@@ -15,22 +15,26 @@
         <section class="main-container">
             <section id="search">
                 <h1>Your Search Results</h1>
-                 <!-- example search function  -->
+                <!-- example search function  -->
                 <form id="search-form" onsubmit="return false">
-                    <input type="text" id="search-input" placeholder="Zip Code">
+                    <input type="text" id="search-input" placeholder="Enter a City!">
                     <input type="submit" id="submitbtn" value="Search">
                 </form>
             </section>
             <section class="results-container">
-                <div id="results-cards">Results Cards</div>
+                <div id="results-cards">
+                    <h2>Results Cards</h2>
+                </div>
                 <div id="map">Map</div>
 
             </section>
         </section>
     </header>
     <main></main>
+    <script src="./assets/weatherapi.js"></script>
     <script src="./assets/search.js"></script>
     <script src="assets/map.js"></script>
+
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf-QB1u6jvqFrI7DbWiXpE2yKIshbYqxo&libraries=places&callback=initMap"></script>
 

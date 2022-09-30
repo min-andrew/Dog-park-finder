@@ -2,6 +2,9 @@
 var searchForm = document.querySelector("#search-form");
 var searchInput = document.querySelector("#search-input");
 var submitbtn = document.querySelector("#submitbtn");
+var city = "";
+
+var resultsCards = document.querySelector("#results-cards");
 
 function search(event) {
     event.preventDefault();
@@ -10,9 +13,8 @@ function search(event) {
         console.error('You need a search input value!');
         return;
     }
-
-    var searchResult = searchInput.value;
-    return searchResult;
+    city = searchInput.value;
+    cityLoc();
 };
 
 submitbtn.addEventListener("click", search);
