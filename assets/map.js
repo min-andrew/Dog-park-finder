@@ -4,11 +4,14 @@ function initMap() {
   //   location.lat = pos.coords.latitude;
   //   location.long = pos.coords.longitude;
   // });
+  location.lat = newLat;
+  location.long = newLong;
+
 
   map = new google.maps.Map(document.getElementById('map'), {
     center: {
-      lat: newLat,
-      lng: newLong
+      lat: location.lat,
+      lng: location.long
     },
     zoom: 10
   });
