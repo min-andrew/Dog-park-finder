@@ -10,35 +10,50 @@
 </head>
 <body>
     <!-- background images for random dogs -->
-    <div class="search-box">
-        <h1>Welcome to</h1>
-        
-        <img src="./assets/images/DOG TOWN.png">
 
-        <!-- zipcode search bar -->
-        <input class="input" type="text" placeholder="Enter city name!">
-       
-        <a href="search-results.html">
-        <button id="submitBtn">Submit</button>
-        </a>
-        
-        <h2>Find a dog park for you and your pooch!</h2>
-        <!-- favorite list button/icon -->
+    <h1>Dog Park Search</h1>
+
+    <!-- zipcode search bar -->
+    <input class="input" type="text" placeholder="Type in City or zipcode">
+     
+    <!-- radius per mile btn -->
+    <div class="dropdown is-hoverable">
+          <div class="dropdown-trigger">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+            <span>Radius of Search</span>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+          <div class="dropdown-content">
+            <a href="#" class="dropdown-item">
+              5 miles
+            </a>
+            <a href="#" class="dropdown-item">
+              10 miles
+            </a>
+            <a href="#" class="dropdown-item">
+              15 miles
+            </a>
+            <a href="#" class="dropdown-item">
+              20 miles
+            </a>
+          </div>
+        </div>
+      </div>
       
-      <!-- <div class="dog-background">
-        <img class="random-dogs"/>
-        <img class="random-dogs"/>
-        <img class="random-dogs"/>
-        <img class="random-dogs"/>
-        <img class="random-dogs"/>
-        <img class="random-dogs"/>
-        <img class="random-dogs"/>
-        <img class="random-dogs"/>
-        <img class="random-dogs"/>
-      </div> --> 
+      <!-- submit btn -->
+    
+    <a href="search-results.html">
+      <button>Submit</button>
+    </a>
 
-    <script src="https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single&contains=dog"></script>
-    <script src="assets/search.js"></script>
-    <script src="./assets/JS/dogapi.js"></script>
-  </body>
+      
+<!-- favorite list button/icon -->
+  
+<script src="assets/JS/search.js"></script>
+<script src="assets/JS/dogapi.js"></script>
+</body>
 </html>
