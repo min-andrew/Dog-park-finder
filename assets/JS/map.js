@@ -33,6 +33,7 @@ function getResults(location) {
 
 function callback(results, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
+    cardContainer.innerHTML = "";
     for (let i = 0; i < results.length; i++) {
       let place = results[i];
       console.log(results);
@@ -45,25 +46,24 @@ function callback(results, status) {
       let placeName = place.name;
       let placeVicinity = place.vicinity;
       let placeRating = "Rating: " + place.rating;
-      
 
 
       var resultcard = document.createElement("div");
       var name = document.createElement("h3");
       var vicinity = document.createElement("p");
       var rating = document.createElement("p");
-      
+
       name.append(placeName);
       vicinity.append(placeVicinity);
       rating.append(placeRating);
-      
+
       resultcard.setAttribute("class", "card");
-      resultsCards.append(resultcard);
+      cardContainer.append(resultcard);
       resultcard.append(name);
       resultcard.append(vicinity);
       resultcard.append(rating);
-      
-     
+
+
 
 
 
