@@ -6,15 +6,47 @@ var city = "";
 
 var resultsCards = document.querySelector("#results-cards");
 var cardContainer = document.querySelector("#card-container");
+var savedCities = document.querySelector("#saved-cities");
+var historyArray = [];
+
 function search(event) {
     event.preventDefault();
-
     if (searchInput.value === "") {
         console.error('You need a search input value!');
         return;
     }
-    city = searchInput.value;
-    cityLoc();
+    var comparison = historyArray.includes(searchInput.value);
+
+
+
+    // if statement prevents repeats in the history section 
+    if (comparison === false) {
+
+        // saves the search result in local storage 
+        localStorage.setItem('searchhistory', searchInput.value);
+        var history = localStorage.getItem('searchhistory');
+        historyArray.push(history);
+
+        // creates the search history tabs
+        var historyresults = document.createElement('button');
+        historyresults.setAttribute("id", "historyResult " + searchInput.value);
+        historyresults.textContent = history;
+        savedCities.append(historyresults);
+        historyresults.addEventListener("click", searchAgain);
+
+        // keeps the search history to 10 
+        if (historyArray.length === 10) {
+            historyArray.shift();
+            if (searchHistory.firstElementChild.innerHTML = history) {
+                searchHistory.firstElementChild.remove();
+            }
+        };
+
+        city = searchInput.value;
+        cityLoc();
+    } else if (comparison === true) {
+        searchAgain();
+    };
 };
 
 submitbtn.addEventListener("click", search);
@@ -25,3 +57,4 @@ submitbtn.addEventListener("click", search);
 //   .then(response => response.json())
 //   .then(result => console.log(result))
 //   .catch(error => console.log('error', error));
+
