@@ -3,21 +3,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html {
-    background-image: url("../assets/dog-collage-colorful.jpg");
+/* html {
+    background-image: url("/assets/images/dog-collage-colorful.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-  
-h1 {
-    text-align: center;
-    font-weight: bold;
-    font-size: 30px;
-    color: white;
-    background-color: black;
-}
+} */
     
 .search-box {
     display: flex;
@@ -26,7 +18,7 @@ h1 {
     flex-direction: column;
     background-color: yellow;
     width: 400px;
-    height: 400px;
+    height: 500px;
     margin: auto;
     margin-top: 15%;
     border-style: solid;
@@ -36,17 +28,25 @@ h1 {
 }
 
 h1 {
+    text-align: center;
+    font-weight: bold;
     background-color: transparent;
     color: black;
-    font-size: 40px;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
+h2 {
+    text-align: center;
+    font-size: 16px; 
+    margin-top: 20px; 
+}
 .input {
     width: 200px;
-    padding: 10px; 
+    padding: 10px;
     text-align: center;
-    margin: 10px; 
-    margin-top: 5px; 
+    margin: 10px;
+    margin-top: 30px;
     font-size: 20px;
 }
 
@@ -56,5 +56,16 @@ h1 {
 
 #submitBtn {
     width: 100px; 
-    margin-top: 20px; 
+    margin-top: 2px; 
+    cursor: pointer;
 }
+
+.random-dogs {
+    width: 300px;
+    height: 300px;
+    
+}
+
+#joke--text {
+    font-family: Roboto, sans;
+  }
