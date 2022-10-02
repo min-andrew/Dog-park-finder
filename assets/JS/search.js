@@ -5,7 +5,7 @@ var submitbtn = document.querySelector("#submitbtn");
 var city = "";
 
 var resultsCards = document.querySelector("#results-cards");
-
+var cardContainer = document.querySelector("#card-container");
 function search(event) {
     event.preventDefault();
 
