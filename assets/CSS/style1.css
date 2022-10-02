@@ -18,7 +18,7 @@
     flex-direction: column;
     background-color: yellow;
     width: 400px;
-    height: 500px;
+    height: 600px;
     margin: auto;
     margin-top: 15%;
     border-style: solid;
@@ -29,6 +29,7 @@
 
 h1 {
     text-align: center;
+    font-style: italic;
     font-weight: bold;
     background-color: transparent;
     color: black;
@@ -39,8 +40,13 @@ h1 {
 h2 {
     text-align: center;
     font-size: 16px; 
-    margin-top: 20px; 
+    margin-top: 30px; 
 }
+
+h3 {
+    font-size: 12px; 
+}
+
 .input {
     width: 200px;
     padding: 10px;
@@ -55,9 +61,24 @@ h2 {
 }
 
 #submitBtn {
-    width: 100px; 
-    margin-top: 2px; 
-    cursor: pointer;
+    width: 100px;
+    transition: all .5s ease;
+    color: black;
+    border: 3px solid black;
+    text-align: center;
+    line-height: 1;
+    font-size: 15px;
+    background-color : white;
+    padding: 4px;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer; 
+    margin-top: 2px;     
+}
+
+#submitBtn:hover {
+    background-color: green;
+    color: white;
 }
 
 .random-dogs {
@@ -66,6 +87,3 @@ h2 {
     
 }
 
-#joke--text {
-    font-family: Roboto, sans;
-  }
