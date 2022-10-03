@@ -11,13 +11,13 @@ var historyArray = [];
 
 function search(event) {
     event.preventDefault();
+
+    // makes sure something is inputed into the search 
     if (searchInput.value === "") {
         console.error('You need a search input value!');
         return;
     }
     var comparison = historyArray.includes(searchInput.value);
-
-
 
     // if statement prevents repeats in the history section 
     if (comparison === false) {
@@ -42,19 +42,16 @@ function search(event) {
             }
         };
 
+        // saves the search input as the new city 
         city = searchInput.value;
+
+        // runs this function to find the long and lat
         cityLoc();
     } else if (comparison === true) {
+        // if in the array for current search results, simply searches without logging it into the array and creating duplicate search history 
         searchAgain();
     };
 };
 
+// event listener for search button 
 submitbtn.addEventListener("click", search);
-
-
-// Code sample for using an inputed city to pull the lon/lat from this api//
-// fetch("https://api.geoapify.com/v1/geocode/autocomplete?text=Trenton&format=json&apiKey=f05b36b362604ffcbb3871392e2bf6b9")
-//   .then(response => response.json())
-//   .then(result => console.log(result))
-//   .catch(error => console.log('error', error));
-
