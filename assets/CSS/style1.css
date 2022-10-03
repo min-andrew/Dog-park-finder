@@ -1,16 +1,18 @@
 * {
     margin: 0;  
     font-family: 'Poppins', sans-serif;
+    cursor: url("/assets/images/paw-icon.png")
 }
 
-/* html {
+html {
     background-image: url("/assets/images/dog-collage-colorful.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-} */
-    
+}
+
+/* Main box on front page. */
 .search-box {
     display: flex;
     justify-content: center;
@@ -18,9 +20,9 @@
     flex-direction: column;
     background-color: yellow;
     width: 400px;
-    height: 600px;
+    height: 400px;
     margin: auto;
-    margin-top: 15%;
+    margin-top: 20%;
     border-style: solid;
     border-color: black;
     border-width: 4px;
@@ -29,61 +31,31 @@
 
 h1 {
     text-align: center;
-    font-style: italic;
     font-weight: bold;
     background-color: transparent;
     color: black;
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 h2 {
     text-align: center;
-    font-size: 16px; 
-    margin-top: 30px; 
+    font-size: 18px; 
+    margin-top: 10px;
+    color: black; 
 }
 
-h3 {
-    font-size: 12px; 
+/* Dog Town logo */
+#dog-button {
+   margin-top: 10px;
 }
 
-.input {
-    width: 200px;
-    padding: 10px;
-    text-align: center;
-    margin: 10px;
-    margin-top: 30px;
-    font-size: 20px;
+/* Changes size of logo so you know you can click and enter */
+#dog-button:hover {
+ 
+    transform: scale(1.1);
+    transition: 0.4s;  
 }
 
-.button {
-    width: 150px;
-}
 
-#submitBtn {
-    width: 100px;
-    transition: all .5s ease;
-    color: black;
-    border: 3px solid black;
-    text-align: center;
-    line-height: 1;
-    font-size: 15px;
-    background-color : white;
-    padding: 4px;
-    outline: none;
-    border-radius: 4px;
-    cursor: pointer; 
-    margin-top: 2px;     
-}
-
-#submitBtn:hover {
-    background-color: green;
-    color: white;
-}
-
-.random-dogs {
-    width: 300px;
-    height: 300px;
-    
-}
-
+/* Add media queries */
