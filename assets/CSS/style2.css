@@ -125,7 +125,9 @@ icon {
     width: 15px;
 }
 
-
+saved-cities {
+    display: none;
+}
 
 /* ----------Media Queries------------ */
 
