@@ -11,20 +11,20 @@
 </head>
 
 <body>
-    <header class="hero" id="side-bar">
+    <header id="hero" style="background-color: #C9E265">
+       
         <section class="main-container">
-            <section id="search">
-                <h1></h1>
-                <!-- example search function  -->
+         
                 <form id="search-form" onsubmit="return false">
-                    <input type="text" id="search-input" placeholder="Enter Another City!">
+                    <input type="text" id="search-input" placeholder="Enter City Name">
                     <input type="submit" id="submitbtn" value="Search">
                 </form>
+            </div>
             </section>
             <section class="results-container">
                 <div id="results-cards">
-                    <h2>Results Cards</h2>
-                    <!-- example button  -->
+                    <h2>Search Results</h2>
+                    
                     <button id="hider" value="results">Show Search History</button>
                     <div id="card-container"></div>
                     <div id="saved-cities"></div>
@@ -33,6 +33,7 @@
 
             </section>
         </section>
+   
     </header>
     <main></main>
     <script src="./assets/JS/weatherapi.js"></script>
