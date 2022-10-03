@@ -161,6 +161,34 @@ button {
     color: goldenrod;
     cursor: pointer;
 }
+
+/* Button to show search history */
+#hider {
+    width: 150px;
+    margin: 5px;
+    padding: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .5s ease;
+    color: goldenrod;
+    border: 2px solid goldenrod;
+    text-align: center;
+    line-height: 1;
+    font-size: 14px;
+    background-color : white;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#saved-cities {
+    flex-direction: column;
+}
+
+saved-cities {
+    display: none;
+}
+
 /* ----------Media Queries------------ */
 
 @media screen and (max-width: 850px) {
