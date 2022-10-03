@@ -118,7 +118,7 @@ h4 {
   
 /* Holds map. */
 #map {
-    height: 700px;
+    min-height: 700px;
     color: black;
     border-style: double;
     border-width: 5px;
@@ -191,9 +191,10 @@ saved-cities {
 
 /* ----------Media Queries------------ */
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
     .results-container {
-        flex-direction:column-reverse;
+        display: flex;
+        flex-direction: column-reverse;
         justify-content: center;
         align-content: center;
         margin: 1px; 
@@ -201,28 +202,18 @@ saved-cities {
 
     #map {
         width: 700px; 
-        height: 500px;
+        height: 300px;
     }
 
     #results-cards {
         width: 700px; 
+        height: 700px;
+        overflow-y: scroll;
     }
 
-    #search {
-        padding: 15px; 
-        background-color: black; 
-        display: grid;
-        height: 110px;
-        margin-left: auto;
-    }
-
-    #search-input {
-        margin-left: 40px; 
-}
-
-@media screen and (max-width: 480px) {
+ @media screen and (max-width: 480px) {
     .results-container {
-        flex-direction:column-reverse;
+        flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
         margin: 1px; 
