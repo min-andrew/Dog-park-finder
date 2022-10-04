@@ -14,7 +14,7 @@ In creating this application, our team was tasked with the following acceptance 
 
 3.  Be interactive (i.e., accept and respond to user input).
 
-4.  Use at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources).
+4.  Use at least two server-side APIs.
 
 5.  Does not use alerts, confirms, or prompts (use modals).
 
@@ -28,15 +28,13 @@ In creating this application, our team was tasked with the following acceptance 
 
 10. Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
-By meeting these goals, this application/project demonstrates our growing knowledge of server-side APIs(Google Maps, Google Places, Dog CEO), GitHub, Agile, HTML, CSS, Bulma, JavaScript, JQuery, Git, and more. 
-
-<!-- Include user story? -->
+By meeting these goals, this application/project demonstrates our growing knowledge of server-side APIs(Google Maps, Google Places, Open Weather), GitHub, Agile, HTML, CSS, Bulma, JavaScript, JQuery, Git, and Canva. 
 
 <br>
 
 ## Installation
 The website is hosted by GitHub pages. <br>
-<!-- You can find it here: [Link to Dog Park Finder](https://jsalexan.github.io/congenial-journey/) -->
+You can find it here: [Link to Dog Park Finder](https://min-andrew.github.io/Dog-park-finder/)
 <br>
 The repository is on GitHub: [Link to GitHub repository for Dog Park Finder.](https://github.com/min-andrew/Dog-park-finder) <br>
 There you will find following : two HTML files, a README, and license files, plus an Access folder containing images, js, and style.css files.
@@ -45,7 +43,8 @@ There you will find following : two HTML files, a README, and license files, plu
 
 ## Usage
 The website (link above) was created to be responsive, and may be used on a desktop computer, medium sized tablet, or smart phone. 
-<!-- ![Screen captures of the app.](./assets/127.0.0.1_3000_index.html.png) -->
+<![Front page of app - logo and doggy background](/assets/images/Screenshot%20(194).png)
+<![Main search page](/assets/images/Screenshot%20(195).png)
 
 <br>
 
@@ -79,6 +78,8 @@ https://developers.google.com/maps/documentation/javascript/reference/places-ser
 https://www.markdownguide.org/cheat-sheet/
 
 https://betterprogramming.pub/add-badges-to-a-github-repository-716d2988dc6a
+
+https://www.canva.com/
 
 <br>
 
