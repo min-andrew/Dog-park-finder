@@ -4,7 +4,7 @@
 }
 
 html {
-    background-image: url("/assets/images/dog-collage-colorful.jpg");
+    background-image: url("assets/images/dog-collage-colorful.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
