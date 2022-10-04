@@ -3,12 +3,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html{
-        background-image: url("assets/images/dog-collage-colorful.jpg");
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-}
 
 /* Main box on front page of site. */
 .search-box {
