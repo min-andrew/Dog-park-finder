@@ -53,8 +53,7 @@ h4 {
 #overlay {
     position: absolute;
     margin: auto;
-    margin-top: 15px
-   
+    margin-top: 15px  
 }
 
 #banner {
@@ -181,6 +180,10 @@ button {
     cursor: pointer;
 }
 
+#hide {
+    display: none;
+}
+
 #saved-cities {
     flex-direction: column;
 }
@@ -192,12 +195,21 @@ saved-cities {
 /* ----------Media Queries------------ */
 
 @media screen and (max-width: 950px) {
+   
+    #banner {
+        display: none}
+    
+    h1 {
+        color: darkgreen
+       
+    }
     .results-container {
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         align-content: center;
-        margin: 1px; 
+        margin: 0;
+        padding: 20px;
     }  
 
     #map {
@@ -208,15 +220,26 @@ saved-cities {
     #results-cards {
         width: 700px; 
         height: 700px;
-        overflow-y: scroll;
+       overflow: hidden;
     }
 
+    /* ----------------------------------------------------- */
  @media screen and (max-width: 480px) {
+
+    #banner {
+        display: block;
+    }
+    #overlay {
+        position: absolute;
+        margin: auto;
+        margin-top: 2px;
+    }
+   
     .results-container {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        margin: 1px; 
+        margin: 0px; 
     }  
 
     #map {
@@ -226,5 +249,6 @@ saved-cities {
 
     #results-cards {
         width: 350px; 
+        overflow: hidden;
     }
 }};

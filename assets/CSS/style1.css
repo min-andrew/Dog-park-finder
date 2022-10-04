@@ -1,11 +1,10 @@
 * {
     margin: 0;  
     font-family: 'Poppins', sans-serif;
-    cursor: url("/assets/images/paw-icon.png")
 }
 
 html {
-    background-image: url("../assets/images/dog-collage-colorful.jpg");
+    background-image: url("/assets/images/dog-collage-colorful.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
