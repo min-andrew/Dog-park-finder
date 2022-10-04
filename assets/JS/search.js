@@ -7,7 +7,14 @@ var city = "";
 var resultsCards = document.querySelector("#results-cards");
 var cardContainer = document.querySelector("#card-container");
 var savedCities = document.querySelector("#saved-cities");
-var historyArray = [];
+
+if (!permHistory) {
+    var historyArray = [];
+} else {
+    historyArray = JSON.parse(localStorage.getItem('permhistory'));
+};
+
+var pastResultsArray;
 
 function search(event) {
     event.preventDefault();
@@ -26,21 +33,20 @@ function search(event) {
         localStorage.setItem('searchhistory', searchInput.value);
         var history = localStorage.getItem('searchhistory');
         historyArray.push(history);
-
-        // creates the search history tabs
-        var historyresults = document.createElement('button');
-        historyresults.setAttribute("id", "historyResult " + searchInput.value);
-        historyresults.textContent = history;
-        savedCities.append(historyresults);
-        historyresults.addEventListener("click", searchAgain);
+        console.log(history);
+        showHistory();
 
         // keeps the search history to 10 
         if (historyArray.length === 10) {
             historyArray.shift();
+
             if (searchHistory.firstElementChild.innerHTML = history) {
                 searchHistory.firstElementChild.remove();
+
             }
         };
+        pastResultsArray = historyArray;
+        localStorage.setItem('permhistory', JSON.stringify(pastResultsArray));
 
         // saves the search input as the new city 
         city = searchInput.value;
@@ -52,6 +58,7 @@ function search(event) {
         searchAgain();
     };
 };
+oldHistory();
 
 // event listener for search button 
 submitbtn.addEventListener("click", search);
