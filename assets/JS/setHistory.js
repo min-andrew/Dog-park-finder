@@ -10,7 +10,7 @@ function showHistory() {
     historyresults.addEventListener("click", searchAgain);
 };
 
-
+// History function that makes the local storage show up even after refreshing 
 function oldHistory() {
     for (var i = 0; i < historyArray.length; i++) {
         var oldhistoryresults = document.createElement('button');
