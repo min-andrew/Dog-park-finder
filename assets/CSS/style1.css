@@ -13,47 +13,53 @@ html{
 /* Main box on front page of site. */
 .search-box {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: yellow;
-    width: 400px;
-    height: 400px;
-    margin: auto;
-    margin-top: 20%;
-    border-style: solid;
-    border-color: black;
-    border-width: 4px;
-    border-radius: 4px;
+    gap: 20px;
+    list-style: none;
+    background-color: var(--dark-green);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 100px;
 }
 
-h1 {
-    text-align: center;
-    font-weight: bold;
-    background-color: transparent;
-    color: black;
+.search-box li {
+    flex-basis: 500px; width: 500px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.search-box li img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 14, 2, 0.63);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: all 0.2s 0.1s ease-in-out;
+    color: white;
+    border-radius: 8px;
+    border-style: double;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 30px;
-    margin-bottom: 10px;
-}
-
-h2 {
+    /* Centering overlay text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    font-size: 18px; 
-    margin-top: 10px;
-    color: black; 
-}
-
-/* Dog Town logo */
-#dog-button {
-   margin-top: 10px;
-}
-
-/* Changes size of logo so you know you can click and enter */
-#dog-button:hover {
- 
-    transform: scale(1.1);
-    transition: 0.4s;  
-}
-
-
-/* Add media queries */
+  }
+  
+  /* Hover feature.*/
+  .search-box li:hover .overlay {
+    transform: scale(1);
+  }
