@@ -7,6 +7,7 @@ function showHistory() {
     historyresults.setAttribute("id", "historyResult " + searchInput.value);
     historyresults.textContent = localStorage.getItem('searchhistory');
     savedCities.append(historyresults);
+    savedCities.style.display = "none"
     historyresults.addEventListener("click", searchAgain);
 };
 
@@ -17,6 +18,7 @@ function oldHistory() {
         oldhistoryresults.setAttribute("id", "oldhistoryResult " + searchInput.value);
         oldhistoryresults.textContent = historyArray[i];
         savedCities.append(oldhistoryresults);
+        savedCities.style.display = "none";
         oldhistoryresults.addEventListener("click", searchAgain);
     };
 };

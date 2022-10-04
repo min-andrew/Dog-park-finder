@@ -39,14 +39,12 @@ function search(event) {
         // keeps the search history to 10 
         if (historyArray.length === 10) {
             historyArray.shift();
-
             if (searchHistory.firstElementChild.innerHTML = history) {
                 searchHistory.firstElementChild.remove();
-
             }
         };
-        pastResultsArray = historyArray;
-        localStorage.setItem('permhistory', JSON.stringify(pastResultsArray));
+
+        localStorage.setItem('permhistory', JSON.stringify(historyArray));
 
         // saves the search input as the new city 
         city = searchInput.value;
